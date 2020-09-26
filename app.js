@@ -1,6 +1,9 @@
 const express = require ('express');
 const app = express();
 
+
+const PORT = process.env.PORT  || 8877
+
 app.get('/about', (req, res) => {
     res.json({
         name: '',
@@ -26,6 +29,6 @@ app.get('/about', (req, res) => {
 })
 
 //Port
-app.listen(3000, () => {
-    console.log(" porta 3000 rodando ");
+app.listen(PORT, () => {
+    console.log(" porta 3000 rodando " + PORT);
 })
